@@ -527,7 +527,7 @@ addEventListener("scroll", () => hdr.classList.toggle("is-stuck", scrollY > 40),
      computador, etc.). Mesmo padrão usado no site do D'n'A Tattoo. */
   if (!el || typeof L === "undefined") return;
 
-  const map = L.map(el, {zoomControl:true, scrollWheelZoom:false})
+  const map = L.map(el, {zoomControl:false, scrollWheelZoom:true})
                .setView([CONFIG.lat, CONFIG.lon], 16);
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
